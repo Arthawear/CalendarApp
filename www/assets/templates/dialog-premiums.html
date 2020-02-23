@@ -1,0 +1,38 @@
+<div class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+
+        <div >
+            <h4 class="modal-title"><span class="glyphicon glyphicon-euro"></span> {{title}}</h4>
+        </div>
+
+        <div class="modal-body" id="dialog-body">
+            <div class="alert alert-danger" role="alert" data-ng-show="showError">{{errorMessage}}</div>
+            <ul class="list-group">
+
+                <li class="list-group-item {{itm.selected ? 'selected':''}}" data-ng-repeat="itm in items track by $index">
+                    <table style="width:100%;">
+                        <tr>
+                            <td data-ng-click="itemClicked(itm)" class="selected" data-ng-show="itm.selected"><span class="glyphicon glyphicon-ok-circle"></span></td>
+
+                            <td data-ng-click="itemClicked(itm)" class="visible-xs number">{{itm.No | cutByWidth:{ width: 132} }}</td>
+                            <td data-ng-click="itemClicked(itm)" class="visible-sm visible-md visible-lg numberFull">{{itm.No | cutByWidth:{ width: 202 } }}</td>
+
+                            <td data-ng-click="itemClicked(itm)" class="max">{{itm.Title}}</td>
+                            <td class="input"><input type="text" data-ng-model="itm.Quantity"></td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" ng-click="add()">{{ 'COMMON.BUTTONS.ADD' | translate}}</button>
+            <button type="button" class="btn btn-default" ng-click="deletePremiums()">{{ 'COMMON.BUTTONS.DELETE' | translate}}</button>
+            <button type="button" class="btn btn-default" ng-click="cancel()">{{ 'COMMON.BUTTONS.CANCEL' | translate}}</button>
+            <button type="button" class="btn btn-default" ng-click="save()">{{ 'COMMON.BUTTONS.OK' | translate}}</button>
+        </div>
+    </div>
+</div>

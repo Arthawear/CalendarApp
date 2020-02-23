@@ -1,0 +1,26 @@
+<div class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div >
+                <h4 class="modal-title">{{ 'DIALOGS.CERT_IMPORT.TITLE' | translate}}</h4>
+            </div>
+            <div class="modal-body">
+
+                {{ 'DIALOGS.CERT_IMPORT.CERT_NAME' | translate}}<br>
+                <b>{{dlg.certFile}}</b><br>
+                <br>
+                <ng-form name="passwdDialog" novalidate role="form">
+                    <div class="form-group input-group-lg" ng-class="{true: 'has-error'}[passwdDialog.password.$dirty && passwdDialog.password.$invalid]">
+                        <label class="control-label">{{ 'DIALOGS.ENTER_PASSWORD.PASSWORD' | translate}}:</label>
+                        <input type="password" class="form-control" name="password" id="password" ng-model="dlg.passwd" ng-keyup="hitEnter($event)" required>
+                    </div>
+                </ng-form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" ng-click="cancel()">{{ 'COMMON.BUTTONS.CANCEL' | translate}}</button>
+                <button type="button" class="btn btn-default" ng-click="save()" ng-disabled="(passwdDialog.$dirty && passwdDialog.$invalid) || passwdDialog.$pristine">{{ 'COMMON.BUTTONS.OK' | translate}}</button>
+            </div>
+
+        </div>
+    </div>
+</div>

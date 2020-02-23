@@ -1,0 +1,176 @@
+/* Custom dialog/modal headers */
+
+.modal.fade .modal-dialog {
+	/* -webkit-transition: -webkit-transform .3s ease-out; */
+	-o-transition: none;
+	/* transition: transform .3s ease-out; */
+	-webkit-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+}
+
+.modal-dialog {
+	padding-top: 15px;
+}
+
+
+
+.dialog-header-error { background-color: #d2322d; }
+.dialog-header-wait { background-color: #428bca; }
+.dialog-header-notify { background-color: #333333; }
+.dialog-header-confirm { background-color: #333333; }
+.dialog-header-error span, .dialog-header-error h4,
+.dialog-header-wait span, .dialog-header-wait h4,
+.dialog-header-notify span, .dialog-header-notify h4,
+.dialog-header-confirm span, .dialog-header-confirm h4 { color: #ffffff; }
+
+.modal-body {
+	max-height: 740px;
+	overflow-y:auto;
+}
+
+
+
+@media screen and (max-height: 1000px) and (orientation: portrait) { .modal-body { max-height: 740px; } }
+@media screen and (max-height: 1000px) and (orientation: landscape) { .modal-body { max-height: 740px; } }
+@media screen and (max-height: 990px) and (orientation: portrait) { .modal-body { max-height: 735px; } }
+@media screen and (max-height: 990px) and (orientation: landscape) { .modal-body { max-height: 735px; } }
+@media screen and (max-height: 980px) and (orientation: portrait) { .modal-body { max-height: 725px; } }
+@media screen and (max-height: 980px) and (orientation: landscape) { .modal-body { max-height: 725px; } }
+@media screen and (max-height: 970px) and (orientation: portrait) { .modal-body { max-height: 715px; } }
+@media screen and (max-height: 970px) and (orientation: landscape) { .modal-body { max-height: 715px; } }
+@media screen and (max-height: 960px) and (orientation: portrait) { .modal-body { max-height: 705px; } }
+@media screen and (max-height: 960px) and (orientation: landscape) { .modal-body { max-height: 705px; } }
+@media screen and (max-height: 950px) and (orientation: portrait) { .modal-body { max-height: 695px; } }
+@media screen and (max-height: 950px) and (orientation: landscape) { .modal-body { max-height: 695px; } }
+@media screen and (max-height: 940px) and (orientation: portrait) { .modal-body { max-height: 685px; } }
+@media screen and (max-height: 940px) and (orientation: landscape) { .modal-body { max-height: 685px; } }
+@media screen and (max-height: 930px) and (orientation: portrait) { .modal-body { max-height: 675px; } }
+@media screen and (max-height: 930px) and (orientation: landscape) { .modal-body { max-height: 675px; } }
+@media screen and (max-height: 920px) and (orientation: portrait) { .modal-body { max-height: 665px; } }
+@media screen and (max-height: 920px) and (orientation: landscape) { .modal-body { max-height: 665px; } }
+@media screen and (max-height: 910px) and (orientation: portrait) { .modal-body { max-height: 655px; } }
+@media screen and (max-height: 910px) and (orientation: landscape) { .modal-body { max-height: 655px; } }
+@media screen and (max-height: 900px) and (orientation: portrait) { .modal-body { max-height: 645px; } }
+@media screen and (max-height: 900px) and (orientation: landscape) { .modal-body { max-height: 645px; } }
+@media screen and (max-height: 890px) and (orientation: portrait) { .modal-body { max-height: 635px; } }
+@media screen and (max-height: 890px) and (orientation: landscape) { .modal-body { max-height: 635px; } }
+@media screen and (max-height: 880px) and (orientation: portrait) { .modal-body { max-height: 625px; } }
+@media screen and (max-height: 880px) and (orientation: landscape) { .modal-body { max-height: 625px; } }
+@media screen and (max-height: 870px) and (orientation: portrait) { .modal-body { max-height: 615px; } }
+@media screen and (max-height: 870px) and (orientation: landscape) { .modal-body { max-height: 615px; } }
+@media screen and (max-height: 860px) and (orientation: portrait) { .modal-body { max-height: 605px; } }
+@media screen and (max-height: 860px) and (orientation: landscape) { .modal-body { max-height: 605px; } }
+@media screen and (max-height: 850px) and (orientation: portrait) { .modal-body { max-height: 595px; } }
+@media screen and (max-height: 850px) and (orientation: landscape) { .modal-body { max-height: 595px; } }
+@media screen and (max-height: 840px) and (orientation: portrait) { .modal-body { max-height: 585px; } }
+@media screen and (max-height: 840px) and (orientation: landscape) { .modal-body { max-height: 585px; } }
+@media screen and (max-height: 830px) and (orientation: portrait) { .modal-body { max-height: 575px; } }
+@media screen and (max-height: 830px) and (orientation: landscape) { .modal-body { max-height: 575px; } }
+@media screen and (max-height: 820px) and (orientation: portrait) { .modal-body { max-height: 565px; } }
+@media screen and (max-height: 820px) and (orientation: landscape) { .modal-body { max-height: 565px; } }
+@media screen and (max-height: 810px) and (orientation: portrait) { .modal-body { max-height: 555px; } }
+@media screen and (max-height: 810px) and (orientation: landscape) { .modal-body { max-height: 555px; } }
+@media screen and (max-height: 800px) and (orientation: portrait) { .modal-body { max-height: 545px; } }
+@media screen and (max-height: 800px) and (orientation: landscape) { .modal-body { max-height: 545px; } }
+@media screen and (max-height: 790px) and (orientation: portrait) { .modal-body { max-height: 535px; } }
+@media screen and (max-height: 790px) and (orientation: landscape) { .modal-body { max-height: 535px; } }
+@media screen and (max-height: 780px) and (orientation: portrait) { .modal-body { max-height: 525px; } }
+@media screen and (max-height: 780px) and (orientation: landscape) { .modal-body { max-height: 525px; } }
+@media screen and (max-height: 770px) and (orientation: portrait) { .modal-body { max-height: 515px; } }
+@media screen and (max-height: 770px) and (orientation: landscape) { .modal-body { max-height: 515px; } }
+@media screen and (max-height: 760px) and (orientation: portrait) { .modal-body { max-height: 505px; } }
+@media screen and (max-height: 760px) and (orientation: landscape) { .modal-body { max-height: 505px; } }
+@media screen and (max-height: 750px) and (orientation: portrait) { .modal-body { max-height: 495px; } }
+@media screen and (max-height: 750px) and (orientation: landscape) { .modal-body { max-height: 495px; } }
+@media screen and (max-height: 740px) and (orientation: portrait) { .modal-body { max-height: 485px; } }
+@media screen and (max-height: 740px) and (orientation: landscape) { .modal-body { max-height: 485px; } }
+@media screen and (max-height: 730px) and (orientation: portrait) { .modal-body { max-height: 475px; } }
+@media screen and (max-height: 730px) and (orientation: landscape) { .modal-body { max-height: 475px; } }
+@media screen and (max-height: 720px) and (orientation: portrait) { .modal-body { max-height: 465px; } }
+@media screen and (max-height: 720px) and (orientation: landscape) { .modal-body { max-height: 465px; } }
+@media screen and (max-height: 710px) and (orientation: portrait) { .modal-body { max-height: 455px; } }
+@media screen and (max-height: 710px) and (orientation: landscape) { .modal-body { max-height: 455px; } }
+@media screen and (max-height: 700px) and (orientation: portrait) { .modal-body { max-height: 445px; } }
+@media screen and (max-height: 700px) and (orientation: landscape) { .modal-body { max-height: 445px; } }
+@media screen and (max-height: 690px) and (orientation: portrait) { .modal-body { max-height: 435px; } }
+@media screen and (max-height: 690px) and (orientation: landscape) { .modal-body { max-height: 435px; } }
+@media screen and (max-height: 680px) and (orientation: portrait) { .modal-body { max-height: 425px; } }
+@media screen and (max-height: 680px) and (orientation: landscape) { .modal-body { max-height: 425px; } }
+@media screen and (max-height: 670px) and (orientation: portrait) { .modal-body { max-height: 415px; } }
+@media screen and (max-height: 670px) and (orientation: landscape) { .modal-body { max-height: 415px; } }
+@media screen and (max-height: 660px) and (orientation: portrait) { .modal-body { max-height: 405px; } }
+@media screen and (max-height: 660px) and (orientation: landscape) { .modal-body { max-height: 405px; } }
+@media screen and (max-height: 650px) and (orientation: portrait) { .modal-body { max-height: 395px; } }
+@media screen and (max-height: 650px) and (orientation: landscape) { .modal-body { max-height: 395px; } }
+@media screen and (max-height: 640px) and (orientation: portrait) { .modal-body { max-height: 385px; } }
+@media screen and (max-height: 640px) and (orientation: landscape) { .modal-body { max-height: 385px; } }
+@media screen and (max-height: 630px) and (orientation: portrait) { .modal-body { max-height: 375px; } }
+@media screen and (max-height: 630px) and (orientation: landscape) { .modal-body { max-height: 375px; } }
+@media screen and (max-height: 620px) and (orientation: portrait) { .modal-body { max-height: 365px; } }
+@media screen and (max-height: 620px) and (orientation: landscape) { .modal-body { max-height: 365px; } }
+@media screen and (max-height: 610px) and (orientation: portrait) { .modal-body { max-height: 355px; } }
+@media screen and (max-height: 610px) and (orientation: landscape) { .modal-body { max-height: 355px; } }
+@media screen and (max-height: 600px) and (orientation: portrait) { .modal-body { max-height: 345px; } }
+@media screen and (max-height: 600px) and (orientation: landscape) { .modal-body { max-height: 345px; } }
+@media screen and (max-height: 590px) and (orientation: portrait) { .modal-body { max-height: 335px; } }
+@media screen and (max-height: 590px) and (orientation: landscape) { .modal-body { max-height: 335px; } }
+@media screen and (max-height: 580px) and (orientation: portrait) { .modal-body { max-height: 325px; } }
+@media screen and (max-height: 580px) and (orientation: landscape) { .modal-body { max-height: 325px; } }
+@media screen and (max-height: 570px) and (orientation: portrait) { .modal-body { max-height: 315px; } }
+@media screen and (max-height: 570px) and (orientation: landscape) { .modal-body { max-height: 315px; } }
+@media screen and (max-height: 560px) and (orientation: portrait) { .modal-body { max-height: 305px; } }
+@media screen and (max-height: 560px) and (orientation: landscape) { .modal-body { max-height: 305px; } }
+@media screen and (max-height: 550px) and (orientation: portrait) { .modal-body { max-height: 295px; } }
+@media screen and (max-height: 550px) and (orientation: landscape) { .modal-body { max-height: 295px; } }
+@media screen and (max-height: 540px) and (orientation: portrait) { .modal-body { max-height: 285px; } }
+@media screen and (max-height: 540px) and (orientation: landscape) { .modal-body { max-height: 285px; } }
+@media screen and (max-height: 530px) and (orientation: portrait) { .modal-body { max-height: 275px; } }
+@media screen and (max-height: 530px) and (orientation: landscape) { .modal-body { max-height: 275px; } }
+@media screen and (max-height: 520px) and (orientation: portrait) { .modal-body { max-height: 265px; } }
+@media screen and (max-height: 520px) and (orientation: landscape) { .modal-body { max-height: 265px; } }
+@media screen and (max-height: 510px) and (orientation: portrait) { .modal-body { max-height: 255px; } }
+@media screen and (max-height: 510px) and (orientation: landscape) { .modal-body { max-height: 255px; } }
+@media screen and (max-height: 500px) and (orientation: portrait) { .modal-body { max-height: 245px; } }
+@media screen and (max-height: 500px) and (orientation: landscape) { .modal-body { max-height: 245px; } }
+@media screen and (max-height: 490px) and (orientation: portrait) { .modal-body { max-height: 235px; } }
+@media screen and (max-height: 490px) and (orientation: landscape) { .modal-body { max-height: 235px; } }
+@media screen and (max-height: 480px) and (orientation: portrait) { .modal-body { max-height: 225px; } }
+@media screen and (max-height: 480px) and (orientation: landscape) { .modal-body { max-height: 225px; } }
+@media screen and (max-height: 470px) and (orientation: portrait) { .modal-body { max-height: 215px; } }
+@media screen and (max-height: 470px) and (orientation: landscape) { .modal-body { max-height: 215px; } }
+@media screen and (max-height: 460px) and (orientation: portrait) { .modal-body { max-height: 205px; } }
+@media screen and (max-height: 460px) and (orientation: landscape) { .modal-body { max-height: 205px; } }
+@media screen and (max-height: 450px) and (orientation: portrait) { .modal-body { max-height: 195px; } }
+@media screen and (max-height: 450px) and (orientation: landscape) { .modal-body { max-height: 195px; } }
+@media screen and (max-height: 440px) and (orientation: portrait) { .modal-body { max-height: 185px; } }
+@media screen and (max-height: 440px) and (orientation: landscape) { .modal-body { max-height: 185px; } }
+@media screen and (max-height: 430px) and (orientation: portrait) { .modal-body { max-height: 175px; } }
+@media screen and (max-height: 430px) and (orientation: landscape) { .modal-body { max-height: 175px; } }
+@media screen and (max-height: 420px) and (orientation: portrait) { .modal-body { max-height: 165px; } }
+@media screen and (max-height: 420px) and (orientation: landscape) { .modal-body { max-height: 165px; } }
+@media screen and (max-height: 410px) and (orientation: portrait) { .modal-body { max-height: 155px; } }
+@media screen and (max-height: 410px) and (orientation: landscape) { .modal-body { max-height: 155px; } }
+@media screen and (max-height: 400px) and (orientation: portrait) { .modal-body { max-height: 145px; } }
+@media screen and (max-height: 400px) and (orientation: landscape) { .modal-body { max-height: 145px; } }
+@media screen and (max-height: 390px) and (orientation: portrait) { .modal-body { max-height: 135px; } }
+@media screen and (max-height: 390px) and (orientation: landscape) { .modal-body { max-height: 135px; } }
+@media screen and (max-height: 380px) and (orientation: portrait) { .modal-body { max-height: 125px; } }
+@media screen and (max-height: 380px) and (orientation: landscape) { .modal-body { max-height: 125px; } }
+@media screen and (max-height: 370px) and (orientation: portrait) { .modal-body { max-height: 115px; } }
+@media screen and (max-height: 370px) and (orientation: landscape) { .modal-body { max-height: 115px; } }
+@media screen and (max-height: 360px) and (orientation: portrait) { .modal-body { max-height: 105px; } }
+@media screen and (max-height: 360px) and (orientation: landscape) { .modal-body { max-height: 105px; } }
+@media screen and (max-height: 350px) and (orientation: portrait) { .modal-body { max-height: 95px; } }
+@media screen and (max-height: 350px) and (orientation: landscape) { .modal-body { max-height: 95px; } }
+@media screen and (max-height: 340px) and (orientation: portrait) { .modal-body { max-height: 85px; } }
+@media screen and (max-height: 340px) and (orientation: landscape) { .modal-body { max-height: 85px; } }
+@media screen and (max-height: 330px) and (orientation: portrait) { .modal-body { max-height: 75px; } }
+@media screen and (max-height: 330px) and (orientation: landscape) { .modal-body { max-height: 75px; } }
+@media screen and (max-height: 320px) and (orientation: portrait) { .modal-body { max-height: 65px; } }
+@media screen and (max-height: 320px) and (orientation: landscape) { .modal-body { max-height: 65px; } }
+@media screen and (max-height: 310px) and (orientation: portrait) { .modal-body { max-height: 55px; } }
+@media screen and (max-height: 310px) and (orientation: landscape) { .modal-body { max-height: 55px; } }
+@media screen and (max-height: 300px) and (orientation: portrait) { .modal-body { max-height: 45px; } }
+@media screen and (max-height: 300px) and (orientation: landscape) { .modal-body { max-height: 45px; } }

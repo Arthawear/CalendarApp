@@ -1,0 +1,21 @@
+/*------------------------------
+TABLE
+--------------------------------*/
+.table.no-border tr td, .table.no-border tr th {
+    border-width: 0;
+}
+
+.table.vertical-align tr td, .table.vertical-align tr th {
+    vertical-align: middle;
+}
+
+.table.vertical-align-top tr td, .table.vertical-align-top tr th {
+    vertical-align: top;
+}
+.table.no-border {
+    border-width: 0;
+    margin-bottom: 0px;
+}
+.table>tr>td.no-border {
+    border: 0px;
+}

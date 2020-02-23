@@ -1,0 +1,10 @@
+.datePickerOutOfBoundsFix {
+    position: relative;
+}
+.datePickerOutOfBoundsFix .dropdown-menu {
+    left: auto !important;
+    right: 0px;
+}
+.glyphicon-star-empty {
+    color: lightgrey;
+}

@@ -1,0 +1,30 @@
+.list-group-item.header, .list-group-item.header:focus, .list-group-item.header:hover {
+    background-color: #f8f8f8;
+    padding: 0px 5px 5px 5px;
+}
+.header-sort-icons {
+    background-color: #f8f8f8;
+    font-size: 9px;
+}
+.header-sort-icon-enabled {
+    color: #000;
+}
+.header-sort-icon-disabled {
+    color: #aaa;
+}
+.list-group-item {
+    padding: 5px;
+}
+
+.btn-default.header-sort-button {
+    border: 0px;
+    background-image: none;
+    -moz-background-image: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+
+    background-color: transparent;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+}

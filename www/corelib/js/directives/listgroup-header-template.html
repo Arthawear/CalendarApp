@@ -1,0 +1,13 @@
+<li class="list-group-item header">
+    <table style="width:100%;" id="sort-header">
+        <tr>
+            <td class="{{header.className}} {{header.classExtension}}" data-ng-repeat="header in vm.listGroupHeaders">
+                <button type="button" class="btn btn-default header-sort-button" data-ng-click="listGroupHeaderClicked(header)">{{header.title}}</button>
+                <div class="header-sort-icons" data-ng-show="header.sortingEnabled">
+                    <span class="glyphicon glyphicon-triangle-{{header.sortIconUp}}"></span>
+                    <span class="glyphicon glyphicon-triangle-{{header.sortIconDown}}"></span>
+                </div>
+            </td>
+        </tr>
+    </table>
+</li>

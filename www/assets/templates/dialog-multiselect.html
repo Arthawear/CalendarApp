@@ -1,0 +1,77 @@
+<div class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+
+            <div >
+                <h4 class="modal-title"><span class="glyphicon glyphicon-th-list"></span> {{title}}</h4>
+            </div>
+
+            <div id="sub-nav-dialog" data-ng-show="filterConfig">
+                <div class="input-group">
+
+                <span class="input-group-btn" data-ng-show="filterConfig.typeFilter">
+                     <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            {{filterTypeName}} <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a data-ng-click="filterTypeChanged('all')">{{ 'COMMON.FILTER.TYPE_ALL' | translate}}</a></li>
+                            <li class="divider"></li>
+                            <li data-ng-repeat="tf in filterConfig.typeFilter"><a data-ng-click="filterTypeChanged(tf)">{{tf.title}}</a></li>
+                        </ul>
+                    </div>
+                </span>
+
+                    <input type="text" id="filter" class="form-control" placeholder="Filter" data-ng-model="filter">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" data-ng-disabled="filterClearDisabled" type="button"
+                            data-ng-click="clearFilter()"><span class="glyphicon glyphicon-remove"></span></button>
+                    <button class="btn btn-default" type="button" data-ng-click="setFilter()"><span
+                            class="glyphicon glyphicon-filter"></span></button>
+                </span>
+                </div>
+            </div>
+
+
+            <div class="modal-body" id="dialog-body">
+                <div class="alert alert-danger" role="alert" data-ng-show="showError">{{errorMessage}}</div>
+                <ul class="list-group">
+
+                    <li class="list-group-item {{itm.selected ? 'selected':''}}" data-ng-repeat="itm in items"
+                        data-ng-click="itemClicked(itm)">
+                        <table style="width:100%;">
+                            <tr>
+                                <td class="selected pad10" data-ng-show="itm.selected"><span
+                                        class="glyphicon glyphicon-ok-circle"></span></td>
+
+
+                                <td class="visible-xs number pad10">{{itm.No | cutByWidth:{ width: 132} }}</td>
+                                <td class="visible-sm visible-md visible-lg numberFull pad10">{{itm.No | cutByWidth:{
+                                    width: 202 } }}
+                                </td>
+
+                                <td class="max pad10">{{itm.Title}}</td>
+                                <td class="visible-sm visible-md visible-lg pad10l w50"
+                                    data-ng-show="itm.Base_Unit_of_Measure && itm.Base_Unit_of_Measure != '' ">
+                                    {{itm.Base_Unit_of_Measure}}
+                                </td>
+                                <td class="favIcon pad10"><span class="glyphicon glyphicon-star"
+                                                                data-ng-show="itm.Favorite"></span></td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" ng-click="cancel()">{{ 'COMMON.BUTTONS.CANCEL' |
+                    translate}}
+                </button>
+                <button type="button" class="btn btn-default" ng-click="save()">{{ 'COMMON.BUTTONS.OK' | translate}}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

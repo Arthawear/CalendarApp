@@ -1,0 +1,45 @@
+<div class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+
+
+        <div >
+            <h4 class="modal-title"><span class="glyphicon glyphicon-th-list"></span> {{title}}</h4>
+        </div>
+        <div id="sub-nav-dialog" data-ng-show="filterConfig">
+            <div class="input-group">
+                <input type="text" id="filter" class="form-control" placeholder="Filter" data-ng-model="filter">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" data-ng-disabled="filterClearDisabled" type="button" data-ng-click="clearFilter()"><span class="glyphicon glyphicon-remove"></span></button>
+                    <button class="btn btn-default" type="button" data-ng-click="setFilter()"><span class="glyphicon glyphicon-filter"></span></button>
+                </span>
+            </div>
+        </div>
+        <div class="modal-body" id="dialog-body">
+
+            <ul class="list-group">
+                
+                <list-group-header data-ng-show="showHeader"></list-group-header>
+                <li class="list-group-item pad10" data-ng-repeat="itm in items" data-ng-click="itemClicked(itm)">
+                    <table style="width:100%;">
+                        <tr>
+                            <td class="selected" data-ng-show="itm.selected" rowspan="2"><span class="glyphicon glyphicon-ok-circle"></span></td>
+
+                            <td class="visible-xs number">{{itm.No | cutByWidth:{ width: 132} }}</td>
+                            <td class="visible-sm visible-md visible-lg numberFull">{{itm.No | cutByWidth:{ width: 202 } }}</td>
+
+                            <td class="max">{{itm.Title}}</td>
+                            <td class="favIcon"><span class="glyphicon glyphicon-star" data-ng-show="itm.Favorite"></span></td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" ng-click="cancel()">{{ 'COMMON.BUTTONS.CANCEL' | translate}}</button>
+        </div>
+    </div>
+</div>

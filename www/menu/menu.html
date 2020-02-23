@@ -1,0 +1,11 @@
+<div id="content-body" style="padding: 10px 0px 10px 20px">
+    <div id="main-menu">
+        <div class="main-menu-item" ng-style="{'background-color': '#{{itm.bg}}', 'width':blockWidth+'px', 'height':blockWidth+'px'}" data-ng-show="!itm.hide" id="{{itm.id}}" data-ng-click="menuItemClicked(itm)" data-ng-repeat="itm in menuItems">
+            <div class="icon" ng-style="{'padding-top':((blockWidth/2)-50)+'px'}">
+                <span class="glyphicon glyphicon-{{itm.icon}}" ng-show="itm.icon" ng-style="{ 'font-size':blockImageFontSize+'px' }"></span>
+            </div>
+            <div class="title" ng-style="{ 'font-size':blockFontSize+'px' }">{{itm.title}}</div>
+            <span class="badge" ng-style="{ 'font-size':blockFontSize+'px' }" data-ng-show="itm.badge>0">{{itm.badge}}</span>
+        </div>
+    </div>
+</div>

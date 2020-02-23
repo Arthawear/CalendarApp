@@ -1,0 +1,36 @@
+<div id="navigationBar" data-ng-class="vm.getNavBarClass()" data-ng-style="{ 'width': vm.navBarWidth+'px' }">
+    <div id="navigationBarContent" ng-class="vm.getNavBarClass()=='navigationBarIcon' ? 'navigationBarContentIcon':''">
+        <div class="navigationBarContentIcon" style="padding-top: 15px;">
+            <button type="button" id="navigationBarBack"
+                    data-ng-class="(vm.navBarBackEnabled) ? '' : 'navigationBarButtonDisabled'"
+                    class="navigationBarButton"
+                    data-ng-show="vm.navBarBackVisible"
+                    data-ng-click="vm.navBarBackClicked()">
+                <span class="glyphicon glyphicon-menu-left"></span>
+            </button>
+        </div>
+        <div id="navigationBarTitle" class="{{vm.navBarTitleClass}}">
+            <div ng-show="vm.getNavBarClass()!='navigationBarIcon'">
+                <h1>{{vm.navBarTitle}}</h1>
+                <h2>{{vm.navBarSubTitle}}</h2>
+            </div>
+            <div ng-show="vm.getNavBarClass()=='navigationBarIcon'" style="display: table;margin:auto">
+                <div style="display:table-cell;vertical-align:bottom;"><div style="vertical-align: bottom; margin:auto;font-size: 28px;color:#2779aa;padding-left:10px;">CALARTHA</div></div>
+            </div>
+        </div>
+
+        <div class="navigationBarContentIcon" style="padding-top: 15px;">
+            <button type="button" id="navigationBarMenu" class="navigationBarButton"
+                    data-ng-show="vm.navBarButtonVisible"
+                    data-ng-class="(vm.navBarButtonEnabled) ? '' : 'navigationBarButtonDisabled'"
+                    data-ng-click="vm.navBarButtonClicked()">
+                <span class="icon-bar" data-ng-show="vm.navBarButtonType=='menu'"></span>
+                <span class="icon-bar" data-ng-show="vm.navBarButtonType=='menu'"></span>
+                <span class="icon-bar" data-ng-show="vm.navBarButtonType=='menu'"></span>
+                <span class="{{vm.navBarButtonIcon}}" data-ng-show="vm.navBarButtonType=='glyph'"></span>
+            </button>
+            <span class="badge menu-badge {{vm.navBarBadgeType}}" data-ng-show="vm.navBarBadgeCount>0" data-ng-click="vm.navBarButtonClicked()">{{vm.navBarBadgeCount}}</span>
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="101066" id="calendar.artha" ios-CFBundleVersion="115" version="1.4.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>CALARTHA</name>
+    <description>
+    </description>
+    <author email="hajen32@gmail.com" >
+        Arthawear
+    </author>
+    <content src="index.html" />
+    <access origin="*" subdomains="true" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="UIApplicationExitsOnSuspend" value="true" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="iosPersistentFileLocation" value="Library" />
+    <preference name="CameraUsesGeolocation" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="BackupWebStorage" value="local" />
+    <preference name="windows-target-version" value="8.1" />
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
+    <platform name="android">
+        <preference name="AndroidLaunchMode" value="singleTask" />
+        <preference name="Orientation" value="default" />
+        <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+        <hook src="hooks/removeAndroidTargetSDK.js" type="after_platform_add" />
+        <hook src="hooks/removeAndroidTargetSDK.js" type="before_build" />
+        <hook src="hooks/removeAndroidTargetSDK.js" type="before_run" />
+        <icon density="ldpi" src="res/icons/android/ldpi.ico" />
+        <icon density="mdpi" src="res/icons/android/mdpi.ico" />
+        <icon density="hdpi" src="res/icons/android/hdpi.ico" />
+        <icon density="xhdpi" src="res/icons/android/xhdpi.ico" />
+        <icon density="xxhdpi" src="res/icons/android/xxhdpi.ico" />
+        <icon density="xxxhdpi" src="res/icons/android/xxxhdpi.ico" />
+    </platform>
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.4" />
+    <plugin name="cordova-plugin-file" spec="^6.0.2" />
+    <plugin name="cordova-sqlcipher-adapter" spec="^0.1.12-rc3" />
+    <plugin name="cordova-plugin-device" spec="^2.0.3" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.4.3" />
+    <plugin name="cordova-plugin-geolocation" spec="^4.0.2" />
+    <plugin name="cordova-plugin-file-opener2" spec="git+https://github.com/JuanjoPP/cordova-plugin-file-opener2.git" />
+    <plugin name="cordova-plugin-network-information" spec="^2.0.2" />
+    <plugin name="cordova-plugin-keyboard" spec="^1.2.0" />
+    <engine name="ios" spec="^4.5.5" />
+</widget>
