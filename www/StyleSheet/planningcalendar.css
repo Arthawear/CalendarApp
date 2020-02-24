@@ -60,5 +60,18 @@ li {
     border-radius: 2px;
 }
 
+h2,
+.h2 {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.fc-toolbar.fc-header-toolbar {
+    margin-bottom: 5px;
+}
+.fc-toolbar .fc-right {
+    margin-bottom: 5px;
+}
+
 
 

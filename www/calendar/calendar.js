@@ -19,6 +19,22 @@
             setCompoundCalendarProperty('views.workWeek','type:timelineWeek,duration:{days:7},dateIncrement:{days:7},slotLabelInterval:{days:1},slotLabelFormat:[dd;DD],weekends:false');
             setCompoundCalendarProperty('views.oneWeek','type:timelineWeek,duration:{days:7},dateIncrement:{days:7},slotLabelInterval:{days:1},slotLabelFormat:[dd;DD],weekends:true');
             setCalendarProperty('nowIndicator','true');
+            addResourceAvailabilityButtons(JSON.stringify([{
+                "text": "Day",
+                "code": "oneDay",
+              },
+              {
+                "text": "2Days",
+                "code": "twoDays",
+              },
+              {
+                "text": "Workweek",
+                "code": "workWeek",
+              },
+              {
+                "text": "Week",
+                "code": "oneWeek",
+              }]));
             setCalendarProperty('scrollTime',"07:00:00");
             setCalendarProperty('resourceAreaWidth',"35%");
             setCalendarProperty('resourceGroupField',"");
@@ -131,7 +147,7 @@
         function setView(newView) {
             calendarProperties.currentView = newView;
             var currDateButton = $('.fc-moveToCurrentDate-button');
-            if (newView === 'oneDay') {
+                if (newView === 'oneDay' || newView === 'twoDays' ) {
                 currDateButton.html('Today');
             } else {
                 currDateButton.html('CurrWeek');
@@ -143,6 +159,12 @@
         }
         
           
+        function addResourceAvailabilityButtons(buttons) {
+            if (buttons !== "") {
+                resourceAvailabilityButtons = JSON.parse(buttons);
+            }
+        }
+        
         function addFunctionsToProperties(properties) {
             properties.dayRender = dayRender;
             properties.eventRender = eventRender;
@@ -157,6 +179,7 @@
         
         function addDesigns() {
             addDayDivider();
+            setButtonColorAvailabilityPlanning(resourceAvailabilityButtons);
             setPrevNextDurationVisibility(calendarProperties.defaultView);
         }
         
@@ -182,6 +205,16 @@
         function fillButtonsAvailabilityPlanning(buttons) {
         
             var buttonsAvailabilityPlanning = [];
+            buttons.forEach(function(button) {
+                buttonsAvailabilityPlanning[button.text] = {};
+                buttonsAvailabilityPlanning[button.text].text = button.text;
+                buttonsAvailabilityPlanning[button.text].code = button.code;
+                buttonsAvailabilityPlanning[button.text].click = function() {
+                    GetDate();
+                    setView(button.code);
+                    SetDate();
+                }
+            });
         
             buttonsAvailabilityPlanning['moveToCurrentDate'] = {};
             buttonsAvailabilityPlanning['moveToCurrentDate'].click = goToCurrentDate;
@@ -233,7 +266,17 @@
             });
             defaultHeader.center = centerString;
             return defaultHeader;
+        }
         
+        function setButtonColorAvailabilityPlanning(buttons) {
+            buttons.forEach(function(button) {
+                var buttonClass = 'fc-' + button.text + '-button';
+                var elem = document.getElementsByClassName(buttonClass);
+                elem[0].style.backgroundColor = button.color;
+                elem[0].style.opacity = 0.75;
+                elem[0].style.color = '#2779aa';
+                elem[0].title = button.mouseoverText;
+            });
         }
         
         function setCalendarProperty(name, value) {
