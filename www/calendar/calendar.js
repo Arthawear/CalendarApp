@@ -45,7 +45,7 @@
             setResourceColumns([{"field":"title"}]);
 
             startCalendar();
-            var startDate = new Date(2020, 3, 1, 10, 33, 30, 0);
+            var startDate = new Date(2020, 5, 1, 10, 33, 30, 0);
             //var endDate = new Date(2020, 03, 31, 10, 33, 30, 0);
               
             /* var day = startDate.getDate();
