@@ -52,7 +52,7 @@
 
             $scope.menuItems = [
                 {id: "menuCalendar", image: "1", path: "calendar", title: "Calendar", bg: "D6E9F5"},
-                {id: "menuCalendar", image: "1", path: "calendar", title: "Insert", bg: "D6E9F5"},
+                {id: "menuCalendar", image: "1", path: "calendar", title: "ALMA", bg: "D6E9F5"},
                 {id: "menuCalendar", image: "1", path: "calendar", title: "Setup", bg: "D6E9F5"},
                 {id: "menuCalendar", image: "1", path: "calendar", title: "Other", bg: "D6E9F5"},
             ];

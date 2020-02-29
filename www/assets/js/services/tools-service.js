@@ -18,6 +18,8 @@
         return toolsService;
 
 
+        
+
 
         function init () {
             $rootScope.$on('$viewContentLoaded', function(event) {

@@ -45,7 +45,27 @@
             setResourceColumns([{"field":"title"}]);
 
             startCalendar();
-
+            var startDate = new Date(2020, 3, 1, 10, 33, 30, 0);
+            //var endDate = new Date(2020, 03, 31, 10, 33, 30, 0);
+              
+            /* var day = startDate.getDate();
+            var event = {};
+            var date = new Date();
+            do {
+                date.setDate(day);
+                event = {
+                    "id": "9171",
+                    "resourceId": "Pithon",
+                    "planningGroup": "",
+                    "start": date,
+                    "end": date,
+                    "allDay": "Nein",
+                    "color": "#007700",
+                    "title": "ELOADAS"
+                    };
+                constants.events.push(event);
+                day = day + 2;
+              } while (day < 31); */
             setEvents(constants.events);
             
             //setView('oneDay');
